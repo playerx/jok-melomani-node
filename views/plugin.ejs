@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title><%= title %></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="content-script-type" content="text/javascript">
+
+      <link rel='stylesheet' href='/css/buttons.css' />
+      <link rel='stylesheet' href='/css/jquery-ui.css' />
+      <link rel='stylesheet' href='/css/plugin.css' />
+      <script type="text/javascript" src="/js/common/jquery.min.js"></script>
+      <script type="text/javascript" src="/js/common/jquery.cookie.js"></script>
+      <script type="text/javascript" src="/js/common/jquery-ui-1.8.23.js"></script>
+      <script type="text/javascript" src="/js/common/mediaelement.js"></script>
+      <script type="text/javascript" src="/js/jok/jok.audio.js"></script>
+      <script type="text/javascript" src="/js/plugin.js"></script>
+   </head>
+  <body>
+      <div class="jokfm_plugin_volume">
+         <div class="logo"></div>
+         <div class="volume_opener">
+            <div class="volume-selector"></div>
+         </div>
+      </div>
+      <div class="jokfm_plugin">
+         <div class="item">
+            <img class="next_button" src="/images/plugin/next.png" />
+         </div>
+         <div class="item">
+            <img class="play_button" src="/images/plugin/play.png" />
+            <div class="stop_button"></div>
+         </div>
+         <div class="item">
+            <img class="previous_button" src="/images/plugin/previous.png" />
+         </div>
+         <div class="active_channel title">
+            .FM
+         </div>
+      </div>
+      <% if (isActiveListener) { %>
+      <div class="counter">
+         <!-- TOP.GE COUNTER CODE -->
+         <script language="JavaScript" type="text/javascript" src="http://counter.top.ge/cgi-bin/cod?100+84350"></script>
+         <noscript>
+             <a target="_top" href="http://counter.top.ge/cgi-bin/showtop?84350">
+             <img src="http://counter.top.ge/cgi-bin/count?ID:84350+JS:false" border="0" alt="TOP.GE" /></a>
+         </noscript>
+         <!-- / END OF COUNTER CODE -->
+      </div>
+      <% } %>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title><%= title %></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="content-script-type" content="text/javascript">
+
+      <meta name="apple-mobile-web-app-capable" content="no" />
+      <meta name="description" content="Online Fun Community" />
+      <meta name="application-name" content="Jok.FM" />
+      <meta name="msapplication-tooltip" content="o-sum radio!" />
+      <meta name="msapplication-navbutton-color" content="#55B919" />
+      <meta name="msApplication-ID" content="App" />
+      <meta name="keywords" content="music, radio, fun, fm" />
+
+      <meta property="fb:app_id" content="@System.Configuration.ConfigurationManager.AppSettings["FBAppID"]"/>
+      <meta property="og:title" content="Jok.FM - <%=channel || "o-sum radio!"%>" />
+      <meta property="og:type" content="audio" />
+      <meta property="og:url" content="http://jok.ge/" />
+      <meta property="og:image" content="/images/jokfm_logo.png" />
+      <meta property="og:site_name" content="Jok.ge" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+      <link rel='stylesheet' href='/css/buttons.css' />
+      <link rel='stylesheet' href='/css/style.css' />
+      <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+      <script type="text/javascript" src="/js/common/jquery.min.js"></script>
+      <script type="text/javascript" src="/js/common/jquery.cookie.js"></script>
+      <script type="text/javascript" src="/js/common/mediaelement.js"></script>
+      <script>
+         var passedChannel = '<%=channel%>';
+         var isGameMode;
+      </script>
+      <script type="text/javascript" src="/js/jok/jok.audio.js"></script>
+      <script type="text/javascript" src="/js/client.js"></script>
+   </head>
+  <body>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=447881361891633";
+         fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <div class="x_header">
+         <div class="menu_item">Jok.fm</div>
+         <div class="menu_item channels_count">Channels: <span></span></div>
+         <div class="menu_item listening_users">Listeners: <span></span></div>
+      </div>
+      <div class="x_background"></div>
+      <div id="side_bar">
+         <div id="joklogo">Jok.FM</div>
+         <div id="volume_bar">
+            <div class="volume_icon"></div>
+            <input type="range" id="volume" />
+            <div class="active_track">
+              <div class="channel"></div>
+              <input type="text" class="track" readonly /><br/>
+              <button class="button green search_video">Song Lyrics</button>
+            </div>
+         </div>
+      </div>
+      <div id="tracks_log">
+         <div id="favorites_list">
+         </div>
+         <div id="normal_list">
+         </div>
+      </div>
+      <div style="position: fixed; bottom: 5px; left: 5px;">
+        <!-- TOP.GE COUNTER CODE -->
+        <script language="JavaScript" type="text/javascript" src="http://counter.top.ge/cgi-bin/cod?100+84350"></script>
+        <noscript>
+          <a target="_top" href="http://counter.top.ge/cgi-bin/showtop?84350">
+          <img src="http://counter.top.ge/cgi-bin/count?ID:84350+JS:false" border="0" alt="TOP.GE" /></a>
+        </noscript>
+        <!-- / END OF COUNTER CODE -->
+        <script type="text/javascript">
+         var _gaq = _gaq || [];
+         _gaq.push(['_setAccount', 'UA-6018067-4']);
+         _gaq.push(['_trackPageview']);
+
+         (function() {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+        </script>
+      </div>
+
+      <!-- <div id="search_bar">
+        <div class="close">close</div>
+        <style type="text/css">
+        @import url(http://www.google.com/cse/api/branding.css);
+        </style>
+        <div class="cse-branding-bottom" style="background-color:#FFFFFF;color:#000000">
+          <div class="cse-branding-form">
+            <form action="http://www.google.com" id="cse-search-box" target="_blank">
+              <div>
+                <input type="hidden" name="cx" value="partner-pub-5560503970480137:1599433012" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="text" name="q" size="100" />
+                <input type="submit" name="sa" value="Search" />
+              </div>
+            </form>
+          </div>
+          <div class="cse-branding-logo">
+            <img src="http://www.google.com/images/poweredby_transparent/poweredby_FFFFFF.gif" alt="Google" />
+          </div>
+          <div class="cse-branding-text">
+            Custom Search
+          </div>
+        </div>
+      </div> -->
+
+      <div id="banner">
+        <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-5560503970480137";
+          /* Jok.fm (leftside) */
+          google_ad_slot = "8881271780";
+          google_ad_width = 160;
+          google_ad_height = 600;
+          //-->
+          </script>
+          <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+      </div>
+      
+      <script>
+        if ($(window).width() < 1100 || $(window).height() < 705)
+          $('#banner').hide();
+        
+        $(window).resize(function() {
+          if ($(window).width() >= 1100 && $(window).height() >= 705)
+            $('#banner').show();
+          else
+            $('#banner').hide();
+        })
+      </script>
+  </body>
+</html>

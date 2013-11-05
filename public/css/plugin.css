@@ -1,0 +1,150 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+    background: transparent;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+}
+
+.me-plugin {
+    position: absolute!important;
+}
+.me-cannotplay {
+    display: none;
+}
+
+.jokfm_plugin {
+    width: 300px;
+    float: right;
+    padding: 7px;
+    position: relative;
+    font-family: Sylfaen, Arial;
+}
+
+.jokfm_plugin div.item {
+    float: right;
+    width: 40px;
+}
+
+.jokfm_plugin div.item img,
+.jokfm_plugin div.item div {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.jokfm_plugin div.item img:hover,
+.jokfm_plugin div.item div:hover {
+    opacity: 1;
+}
+
+.jokfm_plugin .active_channel {
+    opacity: .8;
+    cursor: pointer;
+    float: right;
+    padding-right: 5px;
+}
+
+.jokfm_plugin .active_channel:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.jokfm_plugin .stop_button {
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+    margin-left: 13px;
+    margin-top: 2px;
+    background: white;
+    display: none;
+}
+
+.jokfm_plugin .play_button {
+}
+
+.jokfm_plugin_volume {
+    width: 40px;
+    border-radius: 4px;
+    height: 30px;
+    opacity: .8;
+    float: right;
+    border-left: 1px solid rgba(104, 168, 104, 1);
+    position: relative;
+}
+
+.jokfm_plugin_volume .ui-slider-range,
+.jokfm_plugin_volume .ui-slider-handle {
+    cursor: pointer;
+}
+
+.jokfm_plugin_volume .logo {
+    width: 40px;
+    height: 30px;
+    background: url('/images/plugin/media_volume_2.png') top center no-repeat;
+    background-size: 28px;
+    cursor: pointer;
+}
+
+.jokfm_plugin_volume .logo.mute {
+    background: url('/images/plugin/media_volume_0.png') top center no-repeat;
+    background-size: 23px;
+    background-position-y: 3px;
+}
+
+.jokfm_plugin_volume:hover {
+    opacity: 1;
+}
+
+
+.jokfm_plugin_volume img {
+    width: 30px;
+    vertical-align: bottom;
+    float: left;
+    margin-left: 4px;
+}
+
+.jokfm_plugin_volume .volume_opener {
+    width: 24px;
+    position: absolute;
+    top: 28px;
+    right: 0px;
+    height: 116px;
+    background: white;
+    padding-left: 15px;
+    padding-top: 10px;
+    border-radius: 4px;
+    border: 1px solid silver;
+    display: none;
+}
+
+.jokfm_plugin_volume:hover .volume_opener {
+    display: block;
+}
+
+.jokfm_plugin_volume .volume_opener .volume-selector {
+    width: 8px;
+    cursor: pointer;
+}
+
+
+.ui-slider-horizontal
+{
+    margin-top: 9px;
+    height: 3px;
+    margin-left: 13px;
+    margin-right: 13px;
+}
+.ui-slider-handle
+{
+    border-radius: 10px;
+    margin-top: -3px;
+    border: 1px solid #696767 !important;
+    outline-color: transparent;
+    height: 14px !important;
+    width: 14px !important;
+    outline: none;
+}
+.counter{
+    display: none;
+}

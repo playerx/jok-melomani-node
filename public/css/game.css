@@ -1,0 +1,383 @@
+iframe {
+	border: 0px;
+}
+
+.banner {
+	padding: 5px;
+	background: white;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	border: 1px solid silver;
+	margin-top: 10px;
+}
+
+.exit {
+	position: absolute;
+	padding: 10px 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	left: 10px;
+	top: 10px;
+	cursor: pointer;
+	color: silver;
+}
+.exit:hover {
+	border: 1px solid silver;
+	color: #55B919;
+}
+
+
+.x_background {
+	top: 0px!important;
+}
+.game {
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	top: 80px;
+	border-left: 1px solid silver;
+	bottom: 0px;
+}
+.game_title {
+	text-align: right;
+	color: #55B919;
+	font-weight: bold;
+	font-size: 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+	padding-bottom: 5px;
+	padding-right: 3px;
+	width: 400px;
+}
+.game_title .points {
+	right: 0px;
+	top: 7px;
+	font-size: 16px;
+	float: left;
+	padding: 5px;
+	color: gray;
+}
+.game_title .score {
+	color: #55B919;
+	font-size: 20px;
+}
+
+.quest {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+	min-height: 206px;
+	width: 400px;
+}
+
+.answers {
+	padding: 10px 0px 0px 10px;
+	border-radius: 4px;
+	min-height: 100px;
+}
+
+.answer {
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid transparent;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.40);
+}
+
+.answer:hover
+{
+	background: white;
+	border: 1px solid silver;
+}
+
+.answer.selected
+{
+	background: yellow;
+}
+.answer.correct
+{
+	background: green;
+	color: white;
+}
+
+.answer .circle {
+	float: left;
+	margin-left: 15px;
+	color: silver;
+}
+
+.player
+{
+	display: none;
+}
+.play_again
+{
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	text-align: right;
+	border-radius: 4px;
+	padding: 4px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+.play_again:hover
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+.waiting
+{
+	display: none;
+}
+.listen
+{
+	display: none;
+}
+
+.start_btn
+{
+	padding: 25px;
+	border-radius: 19px;
+	background: white;
+	border: 2px solid silver;
+	color: green;
+	font-size: 20px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+#fft
+{
+	background-color: white;
+	position: absolute;
+}
+
+.rules
+{
+	margin-top: 25px;
+	font-size: 15px;
+	color: gray;
+	text-align: left;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.rules ul
+{
+	padding-left: 17px;
+	margin-top: 10px;
+}
+.added_score
+{
+	color: green;
+	font-size: 35px;
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	text-align: right;
+	height: 90px;
+}
+
+.game_results
+{
+	position: fixed;
+	left: 50%;
+	width: 150px;
+	top: 220px;
+	z-index: 1;
+	border-right: 1px solid silver;
+	bottom: -10px;
+	border-top: 1px solid silver;
+	margin-left: -350px;
+}
+.game_results .header
+{
+	position: absolute;
+	top: -30px;
+	left: 10px;
+	right: 10px;
+}
+.game_results .header .title
+{
+	font-weight: bold;
+	font-size: 20px;
+	float: left;
+	color: rgba(0, 0, 0, 0.36);
+}
+.time_info {
+	height: 30px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+	color: white;
+	text-shadow: 0px 0px 4px black;
+	width: 400px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+.time_info div
+{
+	float: right;
+	margin-left: 4px;
+}
+.time_info.active {
+	color: #FF6C6C;
+	text-shadow: 0px 0px 0px black;
+}
+.game_results .items
+{
+}
+.game_results .items div.item
+{
+	padding: 3px 0px;
+	border-bottom: 1px solid rgba(192, 192, 192, 0.14);
+	text-align: left;
+	padding-left: 3px;
+}
+.game_results .items div.item span
+{
+	float: right;
+	margin-right: 5px;
+	margin-top: 1px;
+}
+.game_results .items div.current_user
+{
+	color: #55B919;
+}
+.answers_log
+{
+	text-align: left;
+	padding-left: 3px;
+	margin-top: 10px;
+}
+.answers_log div
+{
+	padding: 7px;
+}
+.answers_log div span
+{
+	color: gray;
+}
+.answers_log div span.scoreadd,
+.answers_log div span.channel
+{
+	color: #55B919;
+}
+.answers_log div span.scoreremove
+{
+	color:red;
+}
+
+.progressBar {
+	height: 7px;
+	position: absolute;
+	left: 0px;
+	margin-top: -1px;
+	border-radius: 0px 3px 3px 0px;
+	border: 1px solid gray;
+	width: 400px;
+	border-left: 0px solid white;
+}
+.progressBar .inner {
+	height: 7px;
+	background: green;
+	border-radius: 0px 2px 2px 0px;
+}
+
+
+
+
+.results {
+	padding: 7px;
+	padding-top: 10px;
+}
+
+.results .new_game {
+	padding: 5px;
+	border-top: 1px solid rgba(255, 255, 255, 0.52);
+}
+
+.results .points_info {
+	padding: 15px 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.52);
+	font-size: 25px;
+	display: none;
+}
+
+.results .points_info a {
+	font-size: 13px;
+}
+
+
+.results .points_info .result_score {
+	color: green;
+}
+
+.results .top_players_day {
+	float: right;
+}
+
+.results .top_players, .results .top_players_day {
+	width: 200px;
+	padding: 5px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+.results .top_players .title, .results .top_players_day .title {
+	font-size: 15px;
+	color: gray;
+	border-bottom: 1px solid silver;
+}
+
+.results .top_players table, .results .top_players_day table {
+	width: 100%;
+	border-radius: 4px;
+	margin-top: 4px;
+	text-align: center;
+	padding: 3px;
+}
+
+.results .top_players table td, .results .top_players_day table td {
+	border-bottom: 1px solid rgba(192, 192, 192, 0.14);
+}
+
+#volume_bar {
+	width: 110px;
+	margin-left: -4px;
+}
+#volume_bar .volume_icon {
+	position: relative;
+	left: auto;
+	margin-left: auto;
+	width: 20px;
+	height: 27px;
+	opacity: 0.5;
+	background: url('/images/media_volume_2.png') center center no-repeat;
+	background-size: 27px;
+	cursor: pointer;
+	margin-top: 7px;
+	float: left;
+}
+#volume {
+	width: 80px;
+	margin-top: 15px;
+}
+
+.fbshare {
+	background: url('/images/fb.png') no-repeat center top;
+	margin-top: 5px;
+	padding-top: 30px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 13px;
+}
+.fbshare:hover {
+	text-decoration: underline;
+}

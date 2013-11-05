@@ -1,0 +1,354 @@
+body {
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+    background: #F5F6F7;
+}
+
+
+/* Header -------------------------------------------- */
+.x_header {
+    position: fixed;
+    background-color: rgba(72, 158, 20, 1);
+    color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 30px;
+    min-width: 980px;
+    top: 0;
+    z-index: 100;
+}
+
+.menu_item {
+    opacity: .8;
+    float: left;
+    padding: 7px 10px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 13px;
+    border-left: 1px solid rgba(104, 168, 104, 1);
+    cursor: default;
+}
+
+.menu_item:hover {
+    opacity: 1;
+}
+
+
+/* Side Bar -------------------------------------------- */
+#side_bar {
+    position: fixed;
+    left: 50%;
+    margin-left: -347px;
+    top: 40px;
+    z-index: 2;
+}
+
+#joklogo {
+    cursor: pointer;
+    width: 120px;
+    height: 22px;
+    background: url('/images/jokfm_logo.png') top center no-repeat;
+    background-size: 100px;
+    color: #55B919;
+    font-weight: bold;
+    font-size: 19px;
+    padding-top: 110px;
+}
+
+#joklogo.disabled {
+    background: url('/images/jokfm_logo_disabled.png') top center no-repeat;
+    background-size: 100px;
+}
+
+
+
+/* Volume Bar ------------------------------------------ */
+#volume_bar {
+}
+
+.volume_icon {
+    position: absolute;
+    left: 50%;
+    margin-left: -67px;
+    width: 20px;
+    height: 27px;
+    opacity: 0.5;
+    background: url('/images/media_volume_2.png') center center no-repeat;
+    background-size: 27px;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.volume_icon.disabled {
+    background: url('/images/media_volume_0.png') center center no-repeat;
+    background-size: 20px;
+}
+
+#volume {
+    width: 80px;
+    margin-top: 15px;
+}
+
+
+/* Tracks Log ------------------------------------------ */
+#tracks_log {
+    text-align: left;
+    position: absolute;
+    top: 99px;
+    left: 50%;
+    right: 0px;
+    margin-left: -150px;
+}
+
+.track_info {
+    position: relative;
+    padding: 5px;
+    border-left: 1px solid white;
+}
+
+.track_info.active {
+    background: rgba(250, 250, 250, 0.5);
+    border-left: 1px solid #55B919;
+}
+
+.track_info:hover {
+    background: rgba(250,250,250,0.9);
+    border-left: 1px solid #55B919;
+    cursor: pointer;
+}
+
+.track_info ._name {
+    color: #55B919;
+    font-weight: normal;
+}
+
+.track_info ._track {
+    color: gray;
+}
+
+.track_info ._count {
+    color: rgba(0, 0, 0, 0.23);
+}
+
+.track_info ._play {
+    float: left;
+    width: 19px;
+    height: 16px;
+}
+
+.track_info:hover ._play {
+    width: 19px;
+    background: url('/images/play_disabled.png') no-repeat;
+    background-size: 16px;
+}
+
+.track_info ._play.playing, .track_info:hover ._play.playing {
+    width: 19px;
+    background: url('/images/play.png') no-repeat!important;
+    background-size: 16px;
+}
+
+.track_info ._time {
+    position: absolute;
+    left: -64px;
+    width: 60px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.32);
+    ;
+	vertical-align: middle;
+}
+
+.track_info ._time ._star {
+    vertical-align: top;
+    background: url('/images/star.gif') center center no-repeat;
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin-left: 4px;
+}
+
+.track_info ._video img {
+    height: 14px;
+    opacity: .2;
+    margin-left: 7px;
+    vertical-align: bottom;
+    margin-bottom: 1px;
+}
+
+.track_info ._video img:hover {
+    opacity: .8;
+}
+
+#search_bar {
+    position: fixed;
+    z-index: 100;
+    width: 600px;
+    top: 288px;
+    left: 50%;
+    margin-left: -356px;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 40px;
+    box-shadow: 0px 0px 10px silver;
+    display: none;
+}
+
+#search_bar .close {
+    color: #03A6F3;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#search_bar .close:hover {
+    text-decoration: underline;
+}
+
+
+/* Other --------------------------------------------- */
+.listening_users {
+    font-weight: normal;
+}
+
+.channels_count {
+    font-weight: normal;
+}
+
+.x_background {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+    height: 635px;
+    background: url('/images/gradient_bg.jpg') repeat-x 0 0;
+}
+
+#player {
+    display: none;
+    visibility: hidden;
+}
+
+#fav_action {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -171px;
+    top: 44px;
+    cursor: pointer;
+}
+
+#fav_action.star {
+    background: url('/images/star.gif') center center no-repeat;
+}
+
+#fav_action.unstar {
+    background: url('/images/unstar.gif') center center no-repeat;
+}
+
+#like_area {
+    position: absolute;
+    right: 0px;
+    margin-left: -145px;
+    margin-top: 24px;
+}
+
+.active_track {
+    text-align: left;
+    margin-top: 10px;
+    width: 130px;
+    border-top: 1px solid #C9C9C9;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px 5px;
+    display: none;
+}
+
+.active_track div.channel {
+    color: #55B919;
+    font-size: 14px;
+    background: url('/images/play.png') no-repeat left top;
+    background-size: 16px;
+    padding-left: 20px;
+}
+
+.active_track input.track {
+    padding: 5px;
+    font-size: 12px;
+    width: 130px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid silver;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.active_track button.search_video {
+    font-size: 13px;
+    font-family: Arial;
+    width: 140px;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#xplayer {
+    height: 90px;
+}
+
+.player_area {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 50px;
+    padding-top: 41px;
+    z-index: 1;
+    background: url('/images/gradient_bg.jpg') repeat-x 0 0;
+}
+
+.player_area .track_info {
+    border-left: 0px solid silver;
+}
+
+.player_area .track_info:hover {
+    background: rgba(250,250,250,0)!important;
+    border-left: 0px solid #55B919!important;
+    cursor: default!important;
+}
+
+#target {
+    width: 280px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #55B919;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+#events {
+    width: 580px;
+    height: 300px;
+    text-align: center;
+    margin-top: 10px;
+    border: 0px;
+    color: gray;
+    font-size: 11px;
+}
+
+#banner {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+}
+
+#normal_list .track_info ._time ._star {
+    background: url('/images/unstar.gif') center center no-repeat;
+}
