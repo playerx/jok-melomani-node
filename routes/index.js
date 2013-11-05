@@ -27,7 +27,7 @@ exports.game = function(req, res){
 
 		var port = process.env.PORT || 9005;
 
-		var returnUrl = req.protocol + '://' + req.host  + ( port == 80 || port == 443 ? '' : ':'+port ) + req.path;
+		var returnUrl = req.protocol + '://' + req.host + (process.env.PORT ? '' : ':' + port) + req.path;
 
 		res.writeHead(302, {
 			"location": "http://old.jok.ge/node/getsid?returnUrl=" + returnUrl
