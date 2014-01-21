@@ -23,9 +23,9 @@ exports.index = function(req, res){
 };
 
 exports.game = function(req, res){
-	if (!req.query.sid) {
+    if (!req.query.sid) {
 
-		var port = process.env.PORT || 9005;
+        var port = process.env.PORT || 9005;
 
 		var returnUrl = req.protocol + '://' + req.host + (process.env.PORT ? '' : ':' + port) + req.path;
 
