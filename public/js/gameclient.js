@@ -294,7 +294,7 @@
 	});
 
 	$('.exit').live('click', function() {
-		window.location.assign('https://jok.ge/lobby/melomani');
+		window.location.assign('http://jok.io/lobby/melomani');
 	});
 
 	$('.answer').live('click', function() {
